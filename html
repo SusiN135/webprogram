@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Delivery Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+    .menu { margin: 20px auto; width: 300px; }
+    .item { border: 1px solid #ccc; margin: 10px; padding: 10px; border-radius: 5px; }
+    button { background: #ff4d4f; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
+    #cart { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h2>🍔 Mini Food Delivery App</h2>
+
+  <div class="menu">
+    <div class="item">
+      <p>Burger - ₹100</p>
+      <button onclick="addToCart('Burger', 100)">Add to Cart</button>
+    </div>
+    <div class="item">
+      <p>Pizza - ₹200</p>
+      <button onclick="addToCart('Pizza', 200)">Add to Cart</button>
+    </div>
+    <div class="item">
+      <p>Sandwich - ₹80</p>
+      <button onclick="addToCart('Sandwich', 80)">Add to Cart</button>
+    </div>
+  </div>
+
+  <div id="cart">Cart is empty</div>
+
+  <script>
+    let total = 0;
+    function addToCart(item, price) {
+      total += price;
+      document.getElementById("cart").innerText = "Total: ₹" + total;
+    }
+  </script>
+
+</body>
+</html>
+
